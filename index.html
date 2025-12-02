@@ -300,22 +300,27 @@
                         </div>
                       </div>
                   </div>
-                  <h1>Отправьте заявку и мы перезвоним вам в течение одной минуты</h1>
-                  <form class="registration">
+                  <h1>Отправьте заявку и мы отправим вам все данные на почту</h1>
+                  <form class="registration" action="/send" method="post">
                     <div class="mb-3">
                       <label for="InputClientName" class="form-label">Ваше ФИО</label>
                       <input name="ClientName" class="form-control" id="InputClientName" placeholder="Иванов Иван Иванович" required pattern="^[а-яА-ЯёЁa-zA-Z]+ [а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$">
                     </div>
                     <div class="mb-3">
-                      <label for="InputClientPhone" class="form-label">Телефон</label>
-                      <input name="tel" placeholder="+79000000000" pattern="^((\+7|7|8)+([0-9]){10})$" required class="form-control" id="InputClientPhone">
+                      <label for="InputClientPhone" class="form-label">Электронная почта</label>
+                      <input name="Email" placeholder="mail@domain.com" required class="form-control" id="InputClientPhone">
+                    </div>
+                    <div class="mb-3">
+                      <label for="InputClientPhone" class="form-label">Дата и время</label>
+                      <input name="DateOrder" type="date" required class="form-control" id="DateOrder">
                     </div>
                     <div class="mb-3 form-check">
                       <input type="checkbox" class="form-check-input" id="Check" required>
-                      <label class="form-check-label" for="Check">Я принимаю условия политики обработки персональных данных</label>
+                      <label class="form-check-label" for="Check">Я принимаю условия политики обработки персональных данных</label><br><br>
+                      {{message}}
                     </div>
-                    <button class="button_zapis"> <b>ЗАПИСАТЬСЯ В ТЮНИНГ АТЕЛЬЕ</b> </button>
-                  </form>
+                    <button class="button_zapis" type="submit"> <b>ЗАПИСАТЬСЯ В ТЮНИНГ АТЕЛЬЕ</b> </button>
+                  </form><br><br><br><br>
                 <h1>Контакты</h1>
                 <p><i class="fa-solid fa-map-location-dot"></i> Наш адрес: Можайское ш., 168, рабочий посёлок Новоивановское</p>
                 <p><i class="fas fa-phone-volume"></i> Телефон: 215-672-234</p>
